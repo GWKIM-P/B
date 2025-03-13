@@ -1,0 +1,36 @@
+#github 사용법
+
+# 설치
+sudo apt update  # 패키지 목록 업데이트 (항상 먼저 실행하는 것이 좋습니다)
+sudo apt install git  # Git 설치
+
+# 제대로 설치되었는지 확인
+git --version
+
+# 사용자 확인
+git config --global user.name "Your GitHub Username"
+git config --global user.email "your.email@example.com"
+
+# github 프로젝트 주소 등록
+git remote add origin <repository-url>
+
+# git init
+
+# git branch -M main
+
+# 스테이징 (변경된 파일들을 git 이 추적하도록 함(동기화 같은개념)
+git add .  # 현재 디렉터리의 모든 변경사항을 추가
+git add <file_name>  # 특정 파일만 추가
+
+# 커밋
+git commit -m "코멘트내용(필수)" #add(스테이징) 영역에서 변경한것들을 github에 기록
+
+# push 로컷 저장소에 커밋들을 github 온라인 저장소에 업로드
+git push origin master
+
+# pull 온라인 github에 있는것을 로컬 저장소로 내려받음
+git pull origin main  # (또는 git pull origin master)
+
+git remote set-url origin git@github.com:GWKIM-P/B.git
+
+ssh-keygen -t ed25519 -C "kkw4781@naver.com"
